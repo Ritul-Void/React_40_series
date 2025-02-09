@@ -1,0 +1,82 @@
+/* Windows 98 teal desktop */
+.desktop {
+  background: #008080;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
+/* Windows windows */
+.weather-window,
+.forecast-window {
+  height: 50%;
+  width: 330px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.forecast-window {
+  left: 420px;
+}
+
+/* Location row */
+.location-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.icon-btn {
+  border: none;
+  padding: 2px 6px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Weather stats grid */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.weather-grid img {
+  width: 14px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* Location input */
+.location-input {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.location-input input {
+  width: 120px;
+}
+
+/* Forecast window rows */
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.forecast-day {
+  font-weight: bold;
+}
+
+.forecast-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
