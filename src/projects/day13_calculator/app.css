@@ -1,0 +1,96 @@
+:root {
+  --bg: #0f172a;
+  --display-bg: #1e293b;
+  --btn: #38bdf8;
+  --btn-alt: #0ea5e9;
+  --text: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.calculator-container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Theme buttons */
+.theme-selector {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.theme-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background: var(--btn);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.theme-btn.active,
+.theme-btn:hover {
+  background: var(--btn-alt);
+}
+.calculator {
+  background: var(--display-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.display {
+  background: var(--bg);
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: right;
+  margin-bottom: 16px;
+  min-height: 48px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.buttons button {
+  background: var(--btn);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--bg);
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  background: var(--btn-alt);
+}
+
+.buttons button:active {
+  transform: scale(0.96);
+}
