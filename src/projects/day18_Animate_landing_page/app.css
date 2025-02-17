@@ -1,0 +1,296 @@
+/* --- Reset & Global Variables --- */
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --accent-color: #6d28d9; /* Deep Purple */
+  --highlight-color: #d946ef; /* Neon Pink */
+  --card-bg: #171717;
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* --- Common Section Styles --- */
+.section {
+  width: 100%;
+  height: 100vh; /* Full Viewport Height */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Button Styles */
+.btn-primary, .btn-secondary {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: none;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-color), var(--highlight-color));
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: black;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* --- Section 1: Hero --- */
+.section-1 {
+  background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.content-wrapper {
+  z-index: 2;
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--highlight-color), #4ade80);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #a3a3a3;
+  margin-bottom: 30px;
+}
+
+/* Parallax Phone Element */
+.hero-phone {
+  width: 300px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1) url(./app_ui.jpg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  /* Initial offset for GSAP to grab */
+  transform: translateY(0); 
+}
+
+.live-badge {
+  display: none;
+  top: 20px;
+  left: 20px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.phone-screen {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  animation: fadeUp 2s infinite;
+}
+
+/* --- Section 2: Features --- */
+.section-2 {
+  background-color: #111;
+  align-items: center;
+}
+
+.section-heading {
+  font-size: 8rem;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;
+  z-index: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  border: 1px solid #333;
+  transition: border-color 0.3s;
+}
+
+.feature-card:hover {
+  border-color: var(--highlight-color);
+}
+
+.feature-card h3 {
+  color: var(--highlight-color);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Background floating shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-color);
+  top: 10%;
+  left: -5%;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--highlight-color);
+  bottom: 20%;
+  right: -5%;
+}
+
+/* --- Section 3: Monetization --- */
+.section-3 {
+  background: linear-gradient(180deg, #111 0%, #2e1065 100%);
+  position: relative;
+}
+
+.parallax-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-box {
+  text-align: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.3);
+  padding: 60px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+
+.cta-box h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* --- Mini Footer --- */
+.mini-footer {
+  height: 100px; /* Small height */
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer-links span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-links span:hover {
+  color: white;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .section-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .content-wrapper {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .hero-phone {
+    width: 250px;
+    height: 400px;
+  }
+
+  .parallax-bg-text {
+    font-size: 8rem;
+  }
+}
