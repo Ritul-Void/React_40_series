@@ -1,0 +1,95 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181818;
+  color: #f0f0f0;
+  margin: 0;
+  min-height: 100vh;
+}
+.main-menu, .snake-game {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #232323;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0008;
+  padding: 2rem;
+  text-align: center;
+}
+.username-input {
+  margin-bottom: 1.5rem;
+}
+.username-input input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+.username-input button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modes button {
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #2196f3;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modes button:hover {
+  background: #1769aa;
+}
+.mini-profile {
+  background: #292929;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px #0004;
+}
+.mini-profile h3 {
+  margin: 0 0 0.5rem 0;
+}
+.achievements {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.achievements span {
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #444;
+  color: #bbb;
+  opacity: 0.6;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+.achievements .achieved {
+  background: #ffd700;
+  color: #222;
+  opacity: 1;
+  font-weight: bold;
+}
+.achievements .locked {
+  background: #444;
+  color: #bbb;
+  opacity: 0.5;
+}
+.snake-game button {
+  margin: 1rem 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background: #e53935;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
