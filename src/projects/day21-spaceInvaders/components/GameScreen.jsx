@@ -5,7 +5,7 @@ export default function GameScreen({ difficulty, profile, onDifficultySelect, on
   const [gameState, setGameState] = useState('menu'); // menu, playing, gameOver
   const gameRef = useRef(null);
 
-  // Difficulty settings
+ 
   const difficultySettings = {
     easy: { enemySpeed: 1, bulletSpeed: 5, enemySpawn: 100, pointsMultiplier: 1 },
     hard: { enemySpeed: 2, bulletSpeed: 6, enemySpawn: 60, pointsMultiplier: 2 },
@@ -19,7 +19,7 @@ export default function GameScreen({ difficulty, profile, onDifficultySelect, on
     const ctx = canvas.getContext('2d');
     const settings = difficultySettings[difficulty];
 
-    // Game objects
+
     let player = {
       x: canvas.width / 2 - 20,
       y: canvas.height - 30,

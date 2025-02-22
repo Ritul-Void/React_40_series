@@ -5,7 +5,7 @@ import GameScreen from './components/GameScreen';
 import ProfileScreen from './components/ProfileScreen';
 import AchievementsScreen from './components/AchievementsScreen';
 
-// Initial profile state
+
 const initialProfile = {
   playerName: 'Player',
   totalScore: 0,
@@ -31,12 +31,12 @@ export default function App() {
   const [difficulty, setDifficulty] = useState('easy');
   const [gameStats, setGameStats] = useState(null);
 
-  // Save profile to localStorage whenever it changes
+  
   useEffect(() => {
     localStorage.setItem('spaceInvadersProfile', JSON.stringify(profile));
   }, [profile]);
 
-  // Handle game completion
+
   const handleGameEnd = (stats) => {
     const newProfile = { ...profile };
     newProfile.gamesPlayed += 1;
@@ -69,7 +69,7 @@ export default function App() {
     setCurrentScreen('menu');
   };
 
-  // Handle prestige
+
   const handlePrestige = () => {
     setProfile(prev => ({
       ...prev,
